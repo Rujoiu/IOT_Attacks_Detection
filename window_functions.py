@@ -72,11 +72,6 @@ def select_device(device, window):
     print_device(device, window)
     print('\033[0m' + "\nLoading data")
     add_new(window, "Loading data")
-
-    # window.label = tk.Label(window, text="load", background="#ADD8E6", font="Times 30 bold italic")
-    # window.label.place(relx=0.3, rely=0.3, anchor=tk.CENTER)
-    # window.destroy()
-    # window.__init__(window.par, controller, "hel")
     if device != "all":
         try:
             all_data = fc.functia_desteapta(device)
@@ -98,7 +93,7 @@ def select_device(device, window):
             print("\nRF_entropy")
             fc.RF_entropy_predict(testing_data, testing_labels, device, window)
             print("\nKNN")
-            # fc.knn_predict(testing_data, testing_labels, device, window)
+            fc.knn_predict(testing_data, testing_labels, device, window)
         except FileNotFoundError:
             print("Unable to find the classifier")
             print("Train the classifier and try again")
@@ -124,17 +119,23 @@ def select_data(device, classif, window):
     add_new_de(window, "Data from: " + str(device))
     print('\033[0m' + "\nLoading data")
     add_new(window, "Loading data for: " + device)
-    try:
-        all_data = fc.functia_desteapta(device)
-    except(FileNotFoundError):
-        print("Unable to find the file for: " + device)
-        print("Check if the dataset is complete and try again")
-        add_new_err(window, "Unable to find the file for: " + device)
-        add_new_err(window, "Check if the dataset is complete and try again")
+    if device != "all":
+        try:
+            all_data = fc.functia_desteapta(device)
+        except(FileNotFoundError):
+            print("Unable to find the file for: " + device)
+            print("Check if the dataset is complete and try again")
+            add_new_err(window, "Unable to find the file for: " + device)
+            add_new_err(window, "Check if the dataset is complete and try again")
+    else:
+        all_data = fc.functia_desteapta_all(window)
     training_data, testing_data, training_labels, testing_labels = fc.split_data(all_data)
     print("Data Loaded")
     add_new(window, "Data Loaded")
+
     try:
+        print("\nKNN")
+        fc.knn_predict(testing_data, testing_labels, classif, window)
         print("\nDT_gini")
         fc.DT_gini_predict(testing_data, testing_labels, classif, window)
         print("\nDT_entropy")
@@ -144,7 +145,7 @@ def select_data(device, classif, window):
         print("\nRF_entropy")
         fc.RF_entropy_predict(testing_data, testing_labels, classif, window)
         print("\nKNN")
-        # fc.knn_predict(testing_data, testing_labels, classif, window)
+        fc.knn_predict(testing_data, testing_labels, classif, window)
     except(FileNotFoundError):
         print("Unable to find the classifier")
         print("Train the classifier and try again")

@@ -67,7 +67,7 @@ def functia_desteapta(device):
 # Loads data from csv files for all the devices and creates labels
 # Deals with +/- infity values and NaN values
 def functia_desteapta_all(window):
-    devices_list = ["Damnini_Doorbell", "Ecobee_Thermostat", "Ennino_Doorbell", "Philips_B120N10_Baby_Monitor",
+    devices_list = ["Damnini_Doorbell", "Ecobee_Thermostat", "Ennio_Doorbell", "Philips_B120N10_Baby_Monitor",
                     "Provision_PT_737E_Security_Camera", "Provision_PT_838_Security_Camera", "Samsung_SNH",
                     "SimpleHome_1002_SecurityCamera", "SimpleHome_1003_SecurityCamera"]
     folder = "devices"
@@ -76,6 +76,7 @@ def functia_desteapta_all(window):
     benign_file = "benign_traffic.csv"
     extension = ".csv"
     for device in devices_list:
+        add_new(window, "Now loading for: " + device)
         try:
             print(device)
             benign_path = os.path.join(folder, device, benign_file)
@@ -86,7 +87,7 @@ def functia_desteapta_all(window):
             data_benign['label'] = 'Benign'
             device_data = data_benign
 
-            if (device != "Ennino_Doorbell" and device != "Samsung_SNH"):
+            if (device != "Ennio_Doorbell" and device != "Samsung_SNH"):
                 for file in os.listdir(mirai_path):
                     file_name = os.path.join(mirai_path, file)
                     data = pd.read_csv(file_name)
@@ -118,7 +119,7 @@ def functia_desteapta_all(window):
 
 
 def new_functia_desteapta_all():
-    devices_list = ["Damnini_Doorbell", "Ecobee_Thermostat", "Ennino_Doorbell", "Philips_B120N10_Baby_Monitor",
+    devices_list = ["Damnini_Doorbell", "Ecobee_Thermostat", "Ennio_Doorbell", "Philips_B120N10_Baby_Monitor",
                     "Provision_PT_737E_Security_Camera", "Provision_PT_838_Security_Camera", "Samsung_SNH",
                     "SimpleHome_1002_SecurityCamera", "SimpleHome_1003_SecurityCamera"]
     folder = "devices"
