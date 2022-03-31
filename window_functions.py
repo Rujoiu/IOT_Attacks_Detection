@@ -134,8 +134,6 @@ def select_data(device, classif, window):
     add_new(window, "Data Loaded")
 
     try:
-        print("\nKNN")
-        fc.knn_predict(testing_data, testing_labels, classif, window)
         print("\nDT_gini")
         fc.DT_gini_predict(testing_data, testing_labels, classif, window)
         print("\nDT_entropy")
