@@ -43,27 +43,30 @@ def retrain(device, window):
     training_data, testing_data, training_labels, testing_labels = fc.split_data(all_data)
     print("\nData Loaded")
     add_new(window, "Data Loaded")
-    fc.DT_gini_classifier(training_data, training_labels, device)
-    print("DT_gini Classifier Created")
-    add_new_ti(window, "DT_gini Classifier Created")
-    fc.DT_entropy_classifier(training_data, training_labels, device)
-    print("DT_entropy Classifier Created")
-    add_new_ti(window, "DT_entropy Classifier Created")
-    fc.RF_gini_classifier(training_data, training_labels, device)
-    print("RF_gini Classifier Created")
-    add_new_ti(window, "RF_gini Classifier Created")
-    fc.RF_entropy_classifier(training_data, training_labels, device)
-    print("RF_entropy Classifier Created")
-    add_new_ti(window, "RF_entropy Classifier Created")
+
     fc.knn_classifier(training_data, training_labels, device)
     print("KNN Classifier Created")
     add_new_ti(window, "KNN Classifier Created")
-    # fc.SVM_rbf_classifier(training_data, training_labels, device)
-    # print("SVM_RBF Classifier Created")
-    # add_new_ti(window, "SVM_RBF Classifier Created")
-    # fc.SVM_linear_classifier(training_data, training_labels, device)
-    # print("SVM_Linear Classifier Created")
-    # add_new_ti(window, "SVM_Linear Classifier Created")
+
+    fc.DT_gini_classifier(training_data, training_labels, device)
+    print("DT_gini Classifier Created")
+    add_new_ti(window, "DT_gini Classifier Created")
+
+    fc.DT_entropy_classifier(training_data, training_labels, device)
+    print("DT_entropy Classifier Created")
+    add_new_ti(window, "DT_entropy Classifier Created")
+
+    fc.RF_gini_classifier(training_data, training_labels, device)
+    print("RF_gini Classifier Created")
+    add_new_ti(window, "RF_gini Classifier Created")
+
+    fc.RF_entropy_classifier(training_data, training_labels, device)
+    print("RF_entropy Classifier Created")
+    add_new_ti(window, "RF_entropy Classifier Created")
+
+    # fc.knn_classifier(training_data, training_labels, device)
+    # print("KNN Classifier Created")
+    # add_new_ti(window, "KNN Classifier Created")
     print("=" * 70)
 
 
