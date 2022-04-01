@@ -5,7 +5,6 @@ Created by Alexandru Rujoiu-Mare, March 2022
 
 After downloading the files and unzipping, you should have a folder that looks like this:
 
-- devices (folder)
 - functions.py
 - icon.png
 - icon1.ico
@@ -14,6 +13,8 @@ After downloading the files and unzipping, you should have a folder that looks l
 - README.md
 - requirements.txt
 - window_functions.py
+
+Now, download the "devices" folder from this link (contains the data set + the pre-trained classifiers): https://www.dropbox.com/sh/zuo75ewt2jw2e42/AADF3ykb5_S0QFEB-GX-rzVLa?dl=0
 
 The "devices" folder contains 10 folders: 
 - all
@@ -48,6 +49,17 @@ If not, the NNs will not run on the GPU and you will get the warnings:
 and you will also get some warnings when running the Neural Network, saying that it could not load another dynamic library.
 
 This does not affect in any way the accuracy or the way the algorthm works, but it does affect the time it takes to train the neural networks.
+
+**Your folder should look like this:**
+- devices
+- functions.py
+- icon.png
+- icon1.ico
+- main.py
+- nn.py
+- README.md
+- requirements.txt
+- window_functions.py
 
 
 <h3>2. How to use the GUI </h3>
@@ -114,6 +126,8 @@ Decision Tree and Random Forest classifiers make prediction fast, but they take 
 You can also find the code here (but without pre-trained classifiers nor the data set): https://github.com/Rujoiu/IOT_Attacks_Detection
 
 Data Set: https://archive.ics.uci.edu/ml/datasets/detection_of_IoT_botnet_attacks_N_BaIoT
+
+Data Set + Pre-Trained Classifiers: https://www.dropbox.com/sh/zuo75ewt2jw2e42/AADF3ykb5_S0QFEB-GX-rzVLa?dl=0
 
 
 
