@@ -81,7 +81,7 @@ Here you are able to select first what classifiers you want to use (train on who
 
 For example, you can test the classifiers trained on the data from Damnini_Doorbell on the data from Ecobee_Thermostat.
 
-You are also able to use the classifiers train on the data from all the devices. To do that, just select "Trained on All"
+You are also able to use the classifiers train on the data from all the devices. To do that, just select " "ALL" classifier "
 
 As Ennino Doorbell and Samsung SNH do not have Mirai Attacks, I would recommend not selecting their classifiers to run on other devices' data. You are able to do this, but the accuracy will be very low, for obvious reasons.
 
@@ -104,3 +104,18 @@ SCALED Data - the values have been scaled before training (the values can be gre
 NORMALIZED Data - the values have been normalized before training (the values are between 0-1).
 
 As Keras library does not allow (the progress bar being auto-generated), the results and the progress of the NNs will not be displayed in a top level window. After selecting the neural network that you want to use, you have go back to the terminal. There you can see the summary of the NN and the progress, as well as the accuracy on both train and test set.
+
+<h3>3. Other notes </h3>
+
+Expect KNN to train fast, but to take a longer time to predict (also expect this classifier to have a much bigger size than the others).
+
+Decision Tree and Random Forest classifiers make prediction fast, but they take a longer time to train.
+
+You can also find the code here (but without pre-trained classifiers nor the data set): https://github.com/Rujoiu/IOT_Attacks_Detection
+
+Data Set: https://archive.ics.uci.edu/ml/datasets/detection_of_IoT_botnet_attacks_N_BaIoT
+
+
+
+
+

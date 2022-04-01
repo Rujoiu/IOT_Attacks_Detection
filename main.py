@@ -370,7 +370,7 @@ class SelectClasifWindow(tk.Frame):
                                           command=lambda:[controller.show_frame(SelectDataWindow), set_classif("SimpleHome_1003_SecurityCamera")], height=3, width=20)
         select_clasif_device9.place(relx=0.7, rely=0.6, anchor=tk.CENTER)
 
-        select_clasif_all = tk.Button(self, text="Trained on All",
+        select_clasif_all = tk.Button(self, text="\"ALL\" classifier",
                                       command=lambda:[controller.show_frame(SelectDataWindow), set_classif("all")], height=3, width=20)
         select_clasif_all.place(relx=0.7, rely=0.7, anchor=tk.CENTER)
 
