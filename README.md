@@ -14,7 +14,12 @@ After downloading the files and unzipping, you should have a folder that looks l
 - requirements.txt
 - window_functions.py
 
-Now, download the "devices" folder from this link (contains the data set + the pre-trained classifiers): https://www.dropbox.com/sh/zuo75ewt2jw2e42/AADF3ykb5_S0QFEB-GX-rzVLa?dl=0
+Now, download the "devices" folder from this link (contains the data set + the pre-trained classifiers): https://livemanchesterac-my.sharepoint.com/:f:/g/personal/alexandru_rujoiu-mare_student_manchester_ac_uk/Eh-IGqHTiHZBo0pmLkM2HMoBSDjoC7Ga4hBvZzH_x2SPhQ?e=FKbwda
+
+If you are not able to do this or you don't want to use the classifiers already existent, download the data from the link below, BUT USE THE SAME NAMES for files. (In this case, create the "all" folder and leave it empty)
+
+Data Set: https://archive.ics.uci.edu/ml/datasets/detection_of_IoT_botnet_attacks_N_BaIoT
+
 
 The "devices" folder contains 10 folders: 
 - all
@@ -127,7 +132,7 @@ You can also find the code here (but without pre-trained classifiers nor the dat
 
 Data Set: https://archive.ics.uci.edu/ml/datasets/detection_of_IoT_botnet_attacks_N_BaIoT
 
-Data Set + Pre-Trained Classifiers: https://www.dropbox.com/sh/zuo75ewt2jw2e42/AADF3ykb5_S0QFEB-GX-rzVLa?dl=0
+Data Set + Pre-Trained Classifiers: https://livemanchesterac-my.sharepoint.com/:f:/g/personal/alexandru_rujoiu-mare_student_manchester_ac_uk/Eh-IGqHTiHZBo0pmLkM2HMoBSDjoC7Ga4hBvZzH_x2SPhQ?e=FKbwda
 
 
 
